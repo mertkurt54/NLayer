@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nlayer.Core", "Nlayer.Core\Nlayer.Core.csproj", "{57291A65-268C-4B78-8084-AB02B7F38804}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nlayer.Core", "Nlayer.Core\Nlayer.Core.csproj", "{57291A65-268C-4B78-8084-AB02B7F38804}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Repository", "NLayer.Repository\NLayer.Repository.csproj", "{63ABE233-1BA6-4DCB-9FBE-B21AA2B43411}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayer.Repository", "NLayer.Repository\NLayer.Repository.csproj", "{63ABE233-1BA6-4DCB-9FBE-B21AA2B43411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Service", "NLayer.Service\NLayer.Service.csproj", "{35E2A8C6-3A86-42EE-9B07-BE1A6F76C3F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayer.Service", "NLayer.Service\NLayer.Service.csproj", "{35E2A8C6-3A86-42EE-9B07-BE1A6F76C3F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.API", "NLayer.API\NLayer.API.csproj", "{F5C083E9-762A-41A0-9C2E-7CBBD7EE7644}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayer.API", "NLayer.API\NLayer.API.csproj", "{F5C083E9-762A-41A0-9C2E-7CBBD7EE7644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Web", "NLayer.Web\NLayer.Web.csproj", "{C63C259F-8547-4E13-92F5-A84EFBEACC23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayer.Web", "NLayer.Web\NLayer.Web.csproj", "{C63C259F-8547-4E13-92F5-A84EFBEACC23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLayer.Caching", "NLayer.Caching\NLayer.Caching.csproj", "{C5B2D9E6-3A01-4CB3-9294-9DE4ED485309}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLayer.Caching", "NLayer.Caching\NLayer.Caching.csproj", "{C5B2D9E6-3A01-4CB3-9294-9DE4ED485309}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
