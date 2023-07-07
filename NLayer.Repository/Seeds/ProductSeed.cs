@@ -56,8 +56,8 @@ namespace NLayer.Repository.Seeds
             new Product
             {
                 Id = 5,
-                CategoryId = 2,
-                Name = "Kitap2",
+                CategoryId = 3,
+                Name = "Defter1",
                 Price = 100,
                 Stock = 20,
                 CreatedDate = DateTime.Now
