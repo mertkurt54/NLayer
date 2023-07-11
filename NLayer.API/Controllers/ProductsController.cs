@@ -7,7 +7,6 @@ using NLayer.API.Filters;
 
 namespace NLayer.API.Controllers
 {
-
     public class ProductsController : CustomBaseController
     {
         private readonly IMapper _mapper;
@@ -52,8 +51,8 @@ namespace NLayer.API.Controllers
         public async Task<IActionResult> Save(ProductDto productDto)
         {
             var product = await _service.AddAsync(_mapper.Map<Product>(productDto));
-            var productDtos = _mapper.Map<ProductDto>(product);
-            return CreateActionResult(CustomResponseDto<ProductDto>.Success(201, productDtos));
+            var productsDtos = _mapper.Map<ProductDto>(product);
+            return CreateActionResult(CustomResponseDto<ProductDto>.Success(201, productsDtos));
         }
 
         [HttpPut]
