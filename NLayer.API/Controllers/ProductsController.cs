@@ -1,12 +1,13 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Nlayer.Core.DTOs;
 using Nlayer.Core.Models;
 using Nlayer.Core.Services;
+using NLayer.API.Filters;
 
 namespace NLayer.API.Controllers
 {
+
     public class ProductsController : CustomBaseController
     {
         private readonly IMapper _mapper;
