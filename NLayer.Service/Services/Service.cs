@@ -2,14 +2,8 @@
 using Nlayer.Core.Repositories;
 using Nlayer.Core.Services;
 using Nlayer.Core.UnitOfWorks;
-using NLayer.Repository.Repositories;
 using NLayer.Service.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NLayer.Service.Services
 {
@@ -55,14 +49,14 @@ namespace NLayer.Service.Services
 
             if (hasProduct == null)
             {
-                throw new NotFoundException($"{typeof(T).Name}{" (" + Id +")"} not found");
+                throw new NotFoundException($"{typeof(T).Name}{" (" + Id + ")"} not found");
             }
             return hasProduct;
         }
 
         public async Task RemoveAsync(T entity)
         {
-             _repository.Remove(entity);
+            _repository.Remove(entity);
             await _unitOfWork.CommitAsync();
         }
 
