@@ -22,7 +22,7 @@ namespace NLayer.Web.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _services.GetPorductWithCategory());
+            return View((await _services.GetPorductWithCategory()).Data);
         }
 
         public async Task<IActionResult> Save()
@@ -52,8 +52,8 @@ namespace NLayer.Web.Controllers
             ViewBag.categories = new SelectList(categoriesDto, "Id", "Name");
             return View();
         }
-
-
+        
+        [ServiceFilter(typeof(NotFoundFilter<Product>))]
         public async Task<IActionResult> Update(int id)
         {
             var product = await _services.GetByIdAsnc(id);
@@ -62,8 +62,8 @@ namespace NLayer.Web.Controllers
 
             var categoriesDto = _mapper.Map<List<CategoryDto>>(categories);
 
-            ViewBag.categories = new SelectList(categoriesDto, "Id", "Name",product.CategoryId);
-            return  View(_mapper.Map<ProductDto>(product));
+            ViewBag.categories = new SelectList(categoriesDto, "Id", "Name", product.CategoryId);
+            return View(_mapper.Map<ProductDto>(product));
         }
         [HttpPost]
         public async Task<IActionResult> Update(ProductDto productDto)
@@ -80,6 +80,14 @@ namespace NLayer.Web.Controllers
 
             ViewBag.categories = new SelectList(categoriesDto, "Id", "Name", productDto.CategoryId);
             return View(productDto);
+        }
+
+
+        public async Task<IActionResult> Remove(int id)
+        {
+            var product = await _services.GetByIdAsnc(id);
+            await _services.RemoveAsync(product);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

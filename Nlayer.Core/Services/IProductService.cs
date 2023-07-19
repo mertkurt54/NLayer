@@ -5,6 +5,6 @@ namespace Nlayer.Core.Services
 {
     public interface IProductService : IService<Product>
     {
-        Task<List<ProductWithCategoryDto>> GetPorductWithCategory();
+        Task<CustomResponseDto<List<ProductWithCategoryDto>>> GetPorductWithCategory();
     }
 }
